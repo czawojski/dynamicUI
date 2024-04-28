@@ -27,3 +27,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// advance slides every 5 seconds after page loads:
+const interval = setInterval(function() {
+    plusSlides(1);  
+  }, 5000);
+
+  window.addEventListener("load", interval);
+
